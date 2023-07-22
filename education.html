@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="education.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+
+    <title>Porfolio</title>
+</head>
+<body>
+  <nav>
+    <div class="nav-bar">
+        <i class='bx bx-menu sidebarOpen' ></i>
+        <span class="logo navLogo"><a href="#">Anabel Ramos</a></span>
+        <div class="menu">
+            <div class="logo-toggle">
+                <span class="logo"><a href="#">Anabel Ramos</a></span>
+                <i class='bx bx-x siderbarClose'></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">About</a></li>
+                <li><a href="personal.html">Personal Philosophy</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="awards.html">Awards/Certificates</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="bsn.html">BSN Competencies</a></li>
+                <li><a href="volunteer.html">Volunteer/Clinical</a></li>
+
+            </ul>
+        </div>
+        <div class="darkLight-searchBox">
+            <div class="dark-light">
+                <!-- <i class='bx bx-moon moon'></i>
+                <i class='bx bx-sun sun'></i> -->
+            </div>
+            <div class="searchBox">
+               <div class="searchToggle">
+                <!-- <i class='bx bx-x cancel'></i>
+                <i class='bx bx-search search'></i> -->
+               </div>
+                <!-- <div class="search-field">
+                    <input type="text" placeholder="Search...">
+                    <i class='bx bx-search'></i>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</nav>
+
+<script>
+const body = document.querySelector("body"),
+  nav = document.querySelector("nav"),
+  modeToggle = document.querySelector(".dark-light"),
+  searchToggle = document.querySelector(".searchToggle"),
+  sidebarOpen = document.querySelector(".sidebarOpen"),
+  siderbarClose = document.querySelector(".siderbarClose");
+  let getMode = localStorage.getItem("mode");
+      if(getMode && getMode === "dark-mode"){
+        body.classList.add("dark");
+      }
+// js code to toggle dark and light mode
+  modeToggle.addEventListener("click" , () =>{
+    modeToggle.classList.toggle("active");
+    body.classList.toggle("dark");
+    // js code to keep user selected mode even page refresh or file reopen
+    if(!body.classList.contains("dark")){
+        localStorage.setItem("mode" , "light-mode");
+    }else{
+        localStorage.setItem("mode" , "dark-mode");
+    }
+  });
+// js code to toggle search box
+    searchToggle.addEventListener("click" , () =>{
+    searchToggle.classList.toggle("active");
+  });
+
+  
+//   js code to toggle sidebar
+sidebarOpen.addEventListener("click" , () =>{
+nav.classList.add("active");
+});
+body.addEventListener("click" , e =>{
+let clickedElm = e.target;
+if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
+    nav.classList.remove("active");
+}
+});
+</script>
+
+
+
+  
+  <!-- <nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class="fa-solid fa-bars"></i>
+    </label> 
+    <label class="logo">Anabel Ramos</label>
+    <ul>
+      <li><a class="active" href="#">About</a></li>
+      <li><a href="#">Personal Philosophy</a></li>
+      <li><a href="#">Education</a></li>
+      <li><a href="#">Awards/Certificates</a></li>
+      <li><a href="#">Resume</a></li>
+      <li><a href="#">BSN Competencies</a></li>
+      <li><a href="#">Volunteer/Clinical</a></li>
+
+    </ul>
+  </nav>
+
+  <section></section> -->
+
+
+    
+
+    <!-- Content -->
+  <div class="container">
+    <div id="photo1" class="div1"><p> Diploma coming soon December 2023...</p></div>
+    <div class="image-background">
+      <p class="text" id="school-name">Azusa Pacific University</p>
+      <p class="text" id="small-text">Entry Level Masters in Nursing</p>
+      <p class="text" id="small-text">May, 2022-Present</p>
+      <p class="text" id="small-text">B.S. Nursing-Expected Graduation December, 2023</p>
+
+      <center><img id="photo2" src="Azusa_Pacific_University_seal.svg.png">
+    </div>
+    <!-- <img id="photo3" class="div2" src="images/IMG_0358.jpeg">
+    <a href="file:///D:/644603_eDiploma%20(2).pdf">Degree verification</a>
+    
+    <div class="image-background2">
+      <p class="text" id="school-name">California State Polytechnic University</p>
+      <p class="text" id="small-text">B.S. Psychology</p> -->
+      <!-- <p class="text" id="small-text">December, 2020-</p> -->
+      <!-- <p class="text" id="small-text">Graduation: December 2020</p>
+
+      <img id="photo2" src="12668366l.png"> -->
+    </div>
+  </div>
+
+  <div class="container">
+    <img id="photo3" class="div2" src="images/IMG_0358.jpeg">
+    <a href="file:///D:/644603_eDiploma%20(2).pdf">Degree verification</a>
+    
+    <div class="image-background2">
+      <center><p class="text" id="school-name">California State Polytechnic University, Pomona</p>
+      <p class="text" id="small-text">B.A. Psychology</p>
+      <!-- <p class="text" id="small-text">December, 2020-</p> -->
+      <p class="text" id="small-text">Graduation: December 2020</p>
+
+      <center><img id="photo2" src="12668366l.png">
+    </div>
+  </div>
+
+    
+      
+    
+      <script src="script.js"></script>
+    
+</body>
+</html>

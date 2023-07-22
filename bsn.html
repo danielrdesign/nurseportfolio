@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bsn.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+
+    <title>Porfolio</title>
+</head>
+<body>
+  <nav>
+    <div class="nav-bar">
+        <i class='bx bx-menu sidebarOpen' ></i>
+        <span class="logo navLogo"><a href="#">Anabel Ramos</a></span>
+        <div class="menu">
+            <div class="logo-toggle">
+                <span class="logo"><a href="#">Anabel Ramos</a></span>
+                <i class='bx bx-x siderbarClose'></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">About</a></li>
+                <li><a href="personal.html">Personal Philosophy</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="awards.html">Awards/Certificates</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="bsn.html">BSN Competencies</a></li>
+                <li><a href="volunteer.html">Volunteer/Clinical</a></li>
+
+            </ul>
+        </div>
+        <div class="darkLight-searchBox">
+            <div class="dark-light">
+                <!-- <i class='bx bx-moon moon'></i>
+                <i class='bx bx-sun sun'></i> -->
+            </div>
+            <div class="searchBox">
+               <div class="searchToggle">
+                <!-- <i class='bx bx-x cancel'></i>
+                <i class='bx bx-search search'></i> -->
+               </div>
+                <!-- <div class="search-field">
+                    <input type="text" placeholder="Search...">
+                    <i class='bx bx-search'></i>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</nav>
+
+<script>
+const body = document.querySelector("body"),
+  nav = document.querySelector("nav"),
+  modeToggle = document.querySelector(".dark-light"),
+  searchToggle = document.querySelector(".searchToggle"),
+  sidebarOpen = document.querySelector(".sidebarOpen"),
+  siderbarClose = document.querySelector(".siderbarClose");
+  let getMode = localStorage.getItem("mode");
+      if(getMode && getMode === "dark-mode"){
+        body.classList.add("dark");
+      }
+// js code to toggle dark and light mode
+  modeToggle.addEventListener("click" , () =>{
+    modeToggle.classList.toggle("active");
+    body.classList.toggle("dark");
+    // js code to keep user selected mode even page refresh or file reopen
+    if(!body.classList.contains("dark")){
+        localStorage.setItem("mode" , "light-mode");
+    }else{
+        localStorage.setItem("mode" , "dark-mode");
+    }
+  });
+// js code to toggle search box
+    searchToggle.addEventListener("click" , () =>{
+    searchToggle.classList.toggle("active");
+  });
+
+  
+//   js code to toggle sidebar
+sidebarOpen.addEventListener("click" , () =>{
+nav.classList.add("active");
+});
+body.addEventListener("click" , e =>{
+let clickedElm = e.target;
+if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
+    nav.classList.remove("active");
+}
+});
+</script>
+
+      <section class="section-background">\
+        <h2 class="title-name">BSN Competencies</h2>
+        <div class="container">
+          <div class="items">
+            <img src="images/Doctor's Appointment.webp">
+            <p class="titles">Patient-Centered Care</p>
+            <p><a href="Patient Centered Care BSN Competency PDF.pdf" class="links">Read more</a></p>
+          </div>
+          <div class="items">
+            <img src="images/Rubber Gloves.webp">
+            <p class="titles">Safety</p>
+            <p><a href="Safety BSN Competency PDF.pdf" class="links">Read more</a></p>
+          </div>
+          <div class="items">
+            <img src="images/All Hands In.webp">
+            <p class="titles">Teamwork & Collaboration</p>
+            <p><a href="Teamwork and Collaboration BSN Competency PDF.pdf" class="links">Read more</a></p>
+            <!-- <p><a class="links" href="https://docs.google.com/document/d/1wvulO4e-UIWgmGj7gQU5IfCyzgkcMzQfc64p0JJ0t80/edit">Proof</a></p> -->
+          </div>
+          <div class="items">
+            <img src="images/Therapy Session.webp">
+            <p class="titles">Quality Improvement</p>
+            <p><a href="Quality Improvement BSN Competency PDF.pdf" class="links">Read more</a></p>
+
+          </div>
+          <div class="items">
+            <img src="images/Doctor with Computer .webp">
+            <p class="titles">Informatics</p>
+            <p><a href="Informatics BSN Competency PDF.pdf" class="links">Read more</a></p>
+            <!-- <p><a class="links" href="https://docs.google.com/document/d/1BTuI5WBwnQBxCKaYk3DiN5W5c4RAn4Kb8a9wmmYySaQ/edit">Proof</a></p> -->
+            
+          </div>
+          <div class="items">
+            <img src="images/Vaccinating A Child.webp">
+            <p class="titles">Evidence-Based Practice</p>
+            <p><a href="Evidenced Based Practice BSN Competency PDF.pdf" class="links">Read more</a></p>
+          </div>
+        </div>
+        
+          
+      
+
+
+    
+      
+    
+      <script src="script.js"></script>
+    
+</body>
+</html>

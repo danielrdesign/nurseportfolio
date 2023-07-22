@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="awards.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+
+
+    <title>Porfolio</title>
+</head>
+<body>
+  <nav>
+    <div class="nav-bar">
+        <i class='bx bx-menu sidebarOpen' ></i>
+        <span class="logo navLogo"><a href="#">Anabel Ramos</a></span>
+        <div class="menu">
+            <div class="logo-toggle">
+                <span class="logo"><a href="#">Anabel Ramos</a></span>
+                <i class='bx bx-x siderbarClose'></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">About</a></li>
+                <li><a href="personal.html">Personal Philosophy</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="awards.html">Awards/Certificates</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="bsn.html">BSN Competencies</a></li>
+                <li><a href="volunteer.html">Volunteer/Clinical</a></li>
+
+            </ul>
+        </div>
+        <div class="darkLight-searchBox">
+            <div class="dark-light">
+                <!-- <i class='bx bx-moon moon'></i>
+                <i class='bx bx-sun sun'></i> -->
+            </div>
+            <div class="searchBox">
+               <div class="searchToggle">
+                <!-- <i class='bx bx-x cancel'></i>
+                <i class='bx bx-search search'></i> -->
+               </div>
+                <!-- <div class="search-field">
+                    <input type="text" placeholder="Search...">
+                    <i class='bx bx-search'></i>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</nav>
+
+<section class="section-background">
+   <div class="container">
+     <div class="items">
+       <h2>RELIAS Certificates</h2>
+       <p><a href="relias.html">Click here</a></p>
+       <img id="photo1" src="Cert icons/Relias-Learning-Client-Login.png">
+     </div>
+     <div class="items">
+       <h2>FEMA Certificates</h2>
+       <p><a href="fema.html">Click here</a></p>
+       <img id="photo2" src="https://www.dhs.gov/sites/default/files/images/ochco/20_0925_seal-fema-500.jpg">
+     </div>
+     <div class="items">
+       <h2>IHI Certificates</h2>
+       <p><a href="ihi.html">Click here</a></p>
+       <img id="photo3" src="https://images.squarespace-cdn.com/content/v1/534f6c15e4b095a1b0b2291e/1487187448375-P90VMNFNRN8382R4RYCD/image-asset.png">
+     </div>
+     <div class="items">
+       <h2>Extra Certificates</h2>
+       <p><a href="extra-certs.html">Click here</a></p>
+       <img id="photo4" src="https://s3.amazonaws.com/cms.ipressroom.com/67/files/20187/5b61c8bd2cfac24ff4806ecb_AHA_LOGO-RGB_rk_LG/AHA_LOGO-RGB_rk_LG_hero.jpg">
+     </div>
+   </div>
+
+
+ 
+
+
+<script>
+const body = document.querySelector("body"),
+  nav = document.querySelector("nav"),
+  modeToggle = document.querySelector(".dark-light"),
+  searchToggle = document.querySelector(".searchToggle"),
+  sidebarOpen = document.querySelector(".sidebarOpen"),
+  siderbarClose = document.querySelector(".siderbarClose");
+  let getMode = localStorage.getItem("mode");
+      if(getMode && getMode === "dark-mode"){
+        body.classList.add("dark");
+      }
+// js code to toggle dark and light mode
+  modeToggle.addEventListener("click" , () =>{
+    modeToggle.classList.toggle("active");
+    body.classList.toggle("dark");
+    // js code to keep user selected mode even page refresh or file reopen
+    if(!body.classList.contains("dark")){
+        localStorage.setItem("mode" , "light-mode");
+    }else{
+        localStorage.setItem("mode" , "dark-mode");
+    }
+  });
+// js code to toggle search box
+    searchToggle.addEventListener("click" , () =>{
+    searchToggle.classList.toggle("active");
+  });
+
+  
+//   js code to toggle sidebar
+sidebarOpen.addEventListener("click" , () =>{
+nav.classList.add("active");
+});
+body.addEventListener("click" , e =>{
+let clickedElm = e.target;
+if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
+    nav.classList.remove("active");
+}
+});
+</script>
+
+
+      
+
+
+    
+      
+    
+      <script src="script.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+.wrapper{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.background-container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex; 
+}
+.bg-1{
+    flex: 1;
+    background-color: transparent;
+}
+.bg-2{
+    flex: 1;
+    background-color: transparent;
+}
+.about-container{
+    width: 85%;
+    min-height: 50vh;
+    position: absolute;
+    background-color: rgb(214, 177, 177);
+    box-shadow: 24px 24px 30px #6d8dad;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+    border-radius: 5px;
+    max-width: 1500px;
+}
+.image-container{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image-container img {
+    width: 500px;
+    height: 500px;
+    margin: 20px;
+    border-radius: 10px;
+    
+}
+.text-container{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    font-size: 15px;
+    color: #fff;
+}
+
+.text-container .full-name{
+  text-align: center;
+}
+
+.text-container .welcome{
+    font-size: 30px;
+    padding: 20px 0px;
+
+}
+/* .text-container a{
+    text-decoration: none;
+    padding: 12px;
+    margin: 50px 0px;
+    background-color: rebeccapurple;
+    border: 2px solid transparent;
+    color: white;
+    border-radius: 5px;
+    transition: .3s all ease;
+}
+.text-container a:hover{
+    background-color: transparent;
+    color: black;
+    border: 2px solid rebeccapurple;
+} */
+
+/* Contact section */
+  
+  .contact-section {
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    max-width: 800px;
+    box-shadow: 24px 24px 30px #6d8dad;
+  }
+  
+  .contact-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    display: block;
+    width: 15%;
+    padding: 10px;
+    background-color: rgb(214, 177, 177);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .contact-section a{
+    text-decoration: none;
+  }
+
+  button:hover{
+    background-color: #fff;
+    color: black;
+    border: 1px solid black;
+  }
+
+  #message{
+    padding: 50px;
+  }
+
+
+@media screen and (max-width: 1600px){
+    .about-container{
+        width: 90%;
+    }
+    .image-container img{
+        width: 400px;
+        height: 400px;
+    }
+    .text-container h1{
+        font-size: 50px;
+    }
+}
+@media screen and (max-width: 1100px){
+    .about-container{
+        flex-direction: column;
+    }
+    .image-container img{
+        width: 300px;
+        height: 300px;
+    }
+    .text-container {
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 500px){
+  .wrapper{
+    margin-top: 90px;
+  }
+  .text-container h1{
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 391px){
+  .wrapper{
+    margin-top: 400px;
+  }
+}
+
+
+  
+  /* Add more CSS styles for other pages as needed */
+  /* Welcome & About me section */
+  
+  
+  
+  /* Media Queries for Responsive Design(Contact Section)*/
+  
+
+
+  @media screen and (max-width: 790px) {
+    .contact-section {
+      width: 500px;
+      display: flex;
+      justify-content: center;
+      display: block;
+      
+
+    }
+
+    
+  }
+  
+
+  @media screen and (max-width: 640px){
+    .contact-section{
+      max-width: 400px;
+    }
+  }
+  @media screen and (max-width: 430px){
+    .contact-section{
+      margin-top: 400px;
+      max-width: 300px;
+    }
+    .contact-section button{
+      width: 50%;
+
+  }
+
+  }
+
+  @media screen and (max-width: 430px){
+    .wrapper{
+      margin-top: 300px;
+    }
+  }
+  @media screen and (max-width: 376px){
+    .wrapper{
+      margin-top: 500px;
+    }
+  }
+  
+
+
+  
+
+
+
+
+  

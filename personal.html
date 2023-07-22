@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="personal.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+
+    <title>Porfolio</title>
+</head>
+<body>
+  <nav>
+    <div class="nav-bar">
+        <i class='bx bx-menu sidebarOpen' ></i>
+        <span class="logo navLogo"><a href="#">Anabel Ramos</a></span>
+        <div class="menu">
+            <div class="logo-toggle">
+                <span class="logo"><a href="#">Anabel Ramos</a></span>
+                <i class='bx bx-x siderbarClose'></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">About</a></li>
+                <li><a href="personal.html">Personal Philosophy</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="awards.html">Awards/Certificates</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="bsn.html">BSN Competencies</a></li>
+                <li><a href="volunteer.html">Volunteer/Clinical</a></li>
+
+            </ul>
+        </div>
+        <div class="darkLight-searchBox">
+            <div class="dark-light">
+                <!-- <i class='bx bx-moon moon'></i>
+                <i class='bx bx-sun sun'></i> -->
+            </div>
+            <div class="searchBox">
+               <div class="searchToggle">
+                <!-- <i class='bx bx-x cancel'></i>
+                <i class='bx bx-search search'></i> -->
+               </div>
+                <!-- <div class="search-field">
+                    <input type="text" placeholder="Search...">
+                    <i class='bx bx-search'></i>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</nav>
+
+<script>
+const body = document.querySelector("body"),
+  nav = document.querySelector("nav"),
+  modeToggle = document.querySelector(".dark-light"),
+  searchToggle = document.querySelector(".searchToggle"),
+  sidebarOpen = document.querySelector(".sidebarOpen"),
+  siderbarClose = document.querySelector(".siderbarClose");
+  let getMode = localStorage.getItem("mode");
+      if(getMode && getMode === "dark-mode"){
+        body.classList.add("dark");
+      }
+// js code to toggle dark and light mode
+  modeToggle.addEventListener("click" , () =>{
+    modeToggle.classList.toggle("active");
+    body.classList.toggle("dark");
+    // js code to keep user selected mode even page refresh or file reopen
+    if(!body.classList.contains("dark")){
+        localStorage.setItem("mode" , "light-mode");
+    }else{
+        localStorage.setItem("mode" , "dark-mode");
+    }
+  });
+// js code to toggle search box
+    searchToggle.addEventListener("click" , () =>{
+    searchToggle.classList.toggle("active");
+  });
+
+  
+//   js code to toggle sidebar
+sidebarOpen.addEventListener("click" , () =>{
+nav.classList.add("active");
+});
+body.addEventListener("click" , e =>{
+let clickedElm = e.target;
+if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
+    nav.classList.remove("active");
+}
+});
+</script>
+
+      <div class="pos-cent">
+        <!-- <img class="img-deg" src="/images/photo0.jpg"> -->
+        <h2>Personal Philosophy</h2>
+        <p>&ensp;Professional values can guide someone into what career is the best for them. In nursing,
+          some values that I already highly value is the act of being empathetic and sympathetic towards
+          everyone, being gentle and kind, yet firm and confident. Nurses are some of the most resilient
+          workers. They are there to serve, listen, advocate, promote health, safety, and trust. These are the
+          core values that are guiding my work because these characteristics are who I want to be defined
+          as. As a nurse, I know I will be resilient and a hard worker. I will be humble, kind, helpful,
+          patient, respectful, responsible, open minded, empathetic, sympathetic, and compassionate, not
+          only with patients but with staff too. I will advocate for anyone and listen to those that need to be
+          heard. I understand that my ethical responsibility as a professional nurse is to promote safety and
+          health, maintain competence, confidentiality, privacy, and integrity, respect patient’s rights and
+          choices, and advocate for what’s ethically right in patient care.
+          As I progress through my nursing career, I will promote exemplary nursing practices by
+          maintaining and following my core values to be the person I aspire to be as a nurse. I will
+          provide personalized care for every patient’s specific needs. I will provide active listening and
+          my full attention to each patient under my care. I will use my core values to create patient-nurse
+          relationships to create connections and trust. I will be efficient with my time and resources to
+          ensure I am provided quality and safe patient centered care. Lastly, I will make sure I am taking
+          the time to provide self-care for myself. Self-care is an important aspect of nursing just as much
+          
+          as taking care of patients is. As nurses, we need to take the time to care for ourselves so we can
+          be better nurses for our patients and provide top notch care. When we take care of ourselves, we
+          are filled with more happiness and energy that we can use to fuel our successful practices.
+          My commitment as a nurse is to my patients, my community, and my profession. This is
+          why it is important to me to follow my core values and implement them in my practice because
+          these characteristics are what successful nurses look like in my eyes. Patient’s also benefit from
+          nurses who implement these core values because we are ensuring that we are providing quality
+          and safe patient centered care that allows the patient to feel heard, seen, and taken care of. In my
+          community, and in future communities that I will be a part of, my commitment is to ensure that
+          the quality patient centered care rolls out into the community so that the patients that fall in my
+          hands will have positive outcomes after discharge. It is also my duty to help guide my patients to
+          resources that will help them find their ways in their community such as housing, food, water,
+          clothing, healthcare, etc. Although we cannot provide explicit information, we can guide our
+          patients to those who are certified in providing these resources for them, such as social workers.
+          It is a team effort in the hospital and in the community to ensure our patients are always taken
+          care of inside and outside of the hospital. As for my profession, my commitment is to make sure
+          I am being the nurse that I would desire to have if I was a patient. I will also make sure I am
+          following the Nurse Practice Act and the Nursing Code of Ethics in my practice so that I am
+          always showing professionalism and acting in a manner that is appropriate for my scope of
+          practice and role as a nurse. I will also make sure to always be a team player in my nursing
+          environments. It is important to be able to work with other people so that we can all help one
+          another be successful professionally and individually. Overall, my commitments to my patients,
+          my community, and my profession will always be my top priority in my nursing career.
+          
+          In the working class world, it is important to have professional short term and long term
+          goals so that there is a plan and purpose for striving for success. As of now, my short term
+          professional goals are to focus on completing my nursing program, graduating, and getting my
+          first nursing job as a new grad. My long term professional goals are to grasp all the bedside care
+          skills I can gather as a registered nurse, use my core values to be a successful, patient centered
+          nurse, complete the psychiatric Nurse Practitioner post licensure program, graduate with my
+          master’s degree, get a secondary certification in family Nurse Practitioner, and become a
+          successful Nurse Practitioner. These professional goals are definitely attainable, so I know that I
+          will be able to accomplish every goal that I have listed and will continue to create and
+          accomplish goals as I progress through my nursing career.</p>
+        <!-- <section class="contact-section">
+          <h2>Contact Me</h2>
+          <form>
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+          </form>
+        </section> -->
+      </div>
+
+
+
+
+
+    
+      
+    <!-- <footer>
+      <p>2023 By Anabel Ramos.  All rights reserved</p>
+    </footer> -->
+
+    
+      <script src="script.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="volunteer.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fema.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+
+    <title>Porfolio</title>
+</head>
+<body>
+  <nav>
+    <div class="nav-bar">
+        <i class='bx bx-menu sidebarOpen' ></i>
+        <span class="logo navLogo"><a href="#">Anabel Ramos</a></span>
+        <div class="menu">
+            <div class="logo-toggle">
+                <span class="logo"><a href="#">Anabel Ramos</a></span>
+                <i class='bx bx-x siderbarClose'></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">About</a></li>
+                <li><a href="personal.html">Personal Philosophy</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="awards.html">Awards/Certificates</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="bsn.html">BSN Competencies</a></li>
+                <li><a href="volunteer.html">Volunteer/Clinical</a></li>
+
+            </ul>
+        </div>
+        <div class="darkLight-searchBox">
+            <div class="dark-light">
+                <!-- <i class='bx bx-moon moon'></i>
+                <i class='bx bx-sun sun'></i> -->
+            </div>
+            <div class="searchBox">
+               <div class="searchToggle">
+                <!-- <i class='bx bx-x cancel'></i>
+                <i class='bx bx-search search'></i> -->
+               </div>
+                <!-- <div class="search-field">
+                    <input type="text" placeholder="Search...">
+                    <i class='bx bx-search'></i>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</nav>
+
+<script>
+const body = document.querySelector("body"),
+  nav = document.querySelector("nav"),
+  modeToggle = document.querySelector(".dark-light"),
+  searchToggle = document.querySelector(".searchToggle"),
+  sidebarOpen = document.querySelector(".sidebarOpen"),
+  siderbarClose = document.querySelector(".siderbarClose");
+  let getMode = localStorage.getItem("mode");
+      if(getMode && getMode === "dark-mode"){
+        body.classList.add("dark");
+      }
+// js code to toggle dark and light mode
+  modeToggle.addEventListener("click" , () =>{
+    modeToggle.classList.toggle("active");
+    body.classList.toggle("dark");
+    // js code to keep user selected mode even page refresh or file reopen
+    if(!body.classList.contains("dark")){
+        localStorage.setItem("mode" , "light-mode");
+    }else{
+        localStorage.setItem("mode" , "dark-mode");
+    }
+  });
+// js code to toggle search box
+    searchToggle.addEventListener("click" , () =>{
+    searchToggle.classList.toggle("active");
+  });
+
+  
+//   js code to toggle sidebar
+sidebarOpen.addEventListener("click" , () =>{
+nav.classList.add("active");
+});
+body.addEventListener("click" , e =>{
+let clickedElm = e.target;
+if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
+    nav.classList.remove("active");
+}
+});
+</script>
+
+<img class="image" style="position: absolute; left: 50%; transform: translate(-50%,-50%);" src="Cert icons/Snip20230514_396.webp">
+      <section class="section-background">
+        <div class="container">
+          <div class="items">
+            <!-- <h2>Presbyterian Intercommunity Hospital, Whittier</h2>
+            <p>Critical Care clinical rotation</p> -->
+            <img id="photo1" src="Fema photos/IMG_0325.jpeg">
+          </div>
+          <div class="items">
+            <!-- <h2>Foothill Presbyterian Hospital</h2>
+            <p>Medical/Surgical I Clinical rotation</p> -->
+            <img id="photo2" src="Fema photos/IMG_0326.jpeg">
+          </div>
+        </div>
+        
+          
+      <!-- </section>
+
+        <footer>
+          <p>2023 By Anabel Ramos.  All rights reserved</p>
+        </footer>
+        
+      </section> -->
+
+      
+
+      
+
+    
+      
+    
+      <script src="script.js"></script>
+    
+</body>
+</html>

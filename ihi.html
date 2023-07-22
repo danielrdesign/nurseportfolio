@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="slides.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <title>Porfolio</title>
+</head>
+<body>
+  <nav>
+    <div class="nav-bar">
+        <i class='bx bx-menu sidebarOpen' ></i>
+        <span class="logo navLogo"><a href="#">Anabel Ramos</a></span>
+        <div class="menu">
+            <div class="logo-toggle">
+                <span class="logo"><a href="#">Anabel Ramos</a></span>
+                <i class='bx bx-x siderbarClose'></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">About</a></li>
+                <li><a href="personal.html">Personal Philosophy</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="awards.html">Awards/Certificates</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="bsn.html">BSN Competencies</a></li>
+                <li><a href="volunteer.html">Volunteer/Clinical</a></li>
+
+            </ul>
+        </div>
+        <div class="darkLight-searchBox">
+            <div class="dark-light">
+                <!-- <i class='bx bx-moon moon'></i>
+                <i class='bx bx-sun sun'></i> -->
+            </div>
+            <div class="searchBox">
+               <div class="searchToggle">
+                <!-- <i class='bx bx-x cancel'></i>
+                <i class='bx bx-search search'></i> -->
+               </div>
+                <!-- <div class="search-field">
+                    <input type="text" placeholder="Search...">
+                    <i class='bx bx-search'></i>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- <img class="image" src="Cert icons/Snip20230514_395.webp"> -->
+
+<div class="wrapper">
+    <i id="left" class="fa-solid fa-angle-left"></i>
+    <div class="carousel">
+      <a href="IHI photos/IMG_0336.jpeg"><img id="photo" src="IHI photos/IMG_0336.jpeg" alt="img" draggable="false"></a>
+      <a href="IHI photos/IMG_0337.jpeg"><img id="photo" src="IHI photos/IMG_0337.jpeg" alt="img" draggable="false"></a>
+      <a href="IHI photos/IMG_0338.jpeg"><img id="photo" src="IHI photos/IMG_0338.jpeg" alt="img" draggable="false"></a>
+      <a href="IHI photos/IMG_0339.jpeg"><img id="photo" src="IHI photos/IMG_0339.jpeg" alt="img" draggable="false"></a>
+      <a href="IHI photos/IMG_0340.jpeg"><img id="photo" src="IHI photos/IMG_0340.jpeg" alt="img" draggable="false"></a>
+      <a href="IHI photos/IMG_0341.jpeg"><img id="photo" src="IHI photos/IMG_0341.jpeg" alt="img" draggable="false"></a>
+      <a href="IHI photos/IMG_0342.jpeg"><img id="photo" src="IHI photos/IMG_0342.jpeg" alt="img" draggable="false"></a>
+      <a href="IHI photos/IMG_0343.jpeg"><img id="photo" src="IHI photos/IMG_0343.jpeg" alt="img" draggable="false"></a>
+      <a href="IHI photos/IMG_0344.jpeg"><img id="photo" src="IHI photos/IMG_0344.jpeg" alt="img" draggable="false"></a>
+      <a href="IHI photos/IMG_0345.jpeg"><img id="photo" src="IHI photos/IMG_0345.jpeg" alt="img" draggable="false"></a>
+      <a href="IHI photos/IMG_0346.jpeg"><img id="photo" src="IHI photos/IMG_0346.jpeg" alt="img" draggable="false"></a>
+    </div>
+    <i id="right" class="fa-solid fa-angle-right"></i>
+  </div>
+
+
+
+
+
+<script>
+const body = document.querySelector("body"),
+  nav = document.querySelector("nav"),
+  modeToggle = document.querySelector(".dark-light"),
+  searchToggle = document.querySelector(".searchToggle"),
+  sidebarOpen = document.querySelector(".sidebarOpen"),
+  siderbarClose = document.querySelector(".siderbarClose");
+  let getMode = localStorage.getItem("mode");
+      if(getMode && getMode === "dark-mode"){
+        body.classList.add("dark");
+      }
+// js code to toggle dark and light mode
+  modeToggle.addEventListener("click" , () =>{
+    modeToggle.classList.toggle("active");
+    body.classList.toggle("dark");
+    // js code to keep user selected mode even page refresh or file reopen
+    if(!body.classList.contains("dark")){
+        localStorage.setItem("mode" , "light-mode");
+    }else{
+        localStorage.setItem("mode" , "dark-mode");
+    }
+  });
+// js code to toggle search box
+    searchToggle.addEventListener("click" , () =>{
+    searchToggle.classList.toggle("active");
+  });
+
+  
+//   js code to toggle sidebar
+sidebarOpen.addEventListener("click" , () =>{
+nav.classList.add("active");
+});
+body.addEventListener("click" , e =>{
+let clickedElm = e.target;
+if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
+    nav.classList.remove("active");
+}
+});
+</script>
+
+
+
+  
+  
+
+<!-- <footer>
+  <p>2023 By Anabel Ramos.  All rights reserved</p>
+ </footer> -->
+
+
+    
+      
+    
+      <script src="script.js"></script>
+    
+</body>
+</html>

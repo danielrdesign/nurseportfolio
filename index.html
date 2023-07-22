@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about-me.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+
+    <title>Porfolio</title>
+</head>
+<body>
+  <nav>
+    <div class="nav-bar">
+        <i class='bx bx-menu sidebarOpen' ></i>
+        <span class="logo navLogo"><a href="#">Anabel Ramos</a></span>
+        <div class="menu">
+            <div class="logo-toggle">
+                <span class="logo"><a href="#">Anabel Ramos</a></span>
+                <i class='bx bx-x siderbarClose'></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">About</a></li>
+                <li><a href="personal.html">Personal Philosophy</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="awards.html">Awards/Certificates</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="bsn.html">BSN Competencies</a></li>
+                <li><a href="volunteer.html">Volunteer/Clinical</a></li>
+
+            </ul>
+        </div>
+        <div class="darkLight-searchBox">
+            <div class="dark-light">
+                <!-- <i class='bx bx-moon moon'></i>
+                <i class='bx bx-sun sun'></i> -->
+            </div>
+            <div class="searchBox">
+               <div class="searchToggle">
+                <!-- <i class='bx bx-x cancel'></i>
+                <i class='bx bx-search search'></i> -->
+               </div>
+                <!-- <div class="search-field">
+                    <input type="text" placeholder="Search...">
+                    <i class='bx bx-search'></i>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="wrapper">
+
+  <div class="background-container">
+      <div class="bg-1"></div>
+      <div class="bg-2"></div>
+
+  </div>
+  <div class="about-container">
+      
+      <div class="image-container">
+          <img src="images/photo0.jpg" alt="">
+          
+      </div>
+
+      <div class="text-container">
+          <center><h1 class="full-name">Anabel Ramos <br>BSN, RN</h1>
+          <h1 class="welcome">Welcome to my ePortfolio!</h1>
+          <p>At this time, I am in my last semester of the Bachelors in Nursing portion of an accelerated Entry
+            Level Masters program at Azusa Pacific University. I currently hold a Bachelor of Arts in
+            Psychology from California State Polytechnic University, Pomona. After clinical residency this
+            Fall 2023, utilize my Registered Nurse license to provide quality, safe, and evidenced based
+            patient centered care. This ePortfolio has been created to highlight my personal philosophy,
+            education, awards and certificates, resume and cover letter, my volunteer and clinical
+            experience., and professional development. Please feel free to use the toolbar above to navigate
+            through my journey of academic accomplishments, professional development, qualifications, and
+            certifications. <br> </p>
+          <!-- <a href="">Read More</a> -->
+      </div>
+      
+  </div>
+</div>
+
+    
+    <!-- <div class="pos-cent">
+      <div>
+        <h2 class="name-title" id="full-name">Anabel Ramos</h2>
+        <h2 class="name-title" id="title">RN, BSN</h2>
+        
+        <img class="img-deg" src="images/photo0.jpg">
+      </div>
+      
+      
+      <h2 id="welcome">Welcome to my E-portfolio!</h2>
+      <p>&ensp;At this time, I am in my last semester of the Bachelors in Nursing portion of an accelerated Entry
+      Level Masters program at Azusa Pacific University. I currently hold a Bachelor of Arts in
+      Psychology from California State Polytechnic University, Pomona. After clinical residency this
+      Fall 2023, utilize my Registered Nurse license to provide quality, safe, and evidenced based
+      patient centered care. This ePortfolio has been created to highlight my personal philosophy,
+      education, awards and certificates, resume and cover letter, my volunteer and clinical
+      experience., and professional development. Please feel free to use the toolbar above to navigate
+      through my journey of academic accomplishments, professional development, qualifications, and
+      certifications.</p> -->
+      <section class="contact-section">
+        <h2>CONTACT</h2>
+        <form action="mailto: anabelramos15@apu.edu">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <a><button type="submit" >Send</button></a>
+        </form>
+      </section>
+    </div>
+
+    <!-- <section class="contact-section">
+      <h2>Contact Me</h2>
+      <form>
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+      </form>
+    </section> -->
+
+   <!-- <footer>
+        <p>2023 By Anabel Ramos.  All rights reserved</p>
+  </footer> -->
+
+  <script>
+    const body = document.querySelector("body"),
+      nav = document.querySelector("nav"),
+      modeToggle = document.querySelector(".dark-light"),
+      searchToggle = document.querySelector(".searchToggle"),
+      sidebarOpen = document.querySelector(".sidebarOpen"),
+      siderbarClose = document.querySelector(".siderbarClose");
+      let getMode = localStorage.getItem("mode");
+          if(getMode && getMode === "dark-mode"){
+            body.classList.add("dark");
+          }
+    // js code to toggle dark and light mode
+      modeToggle.addEventListener("click" , () =>{
+        modeToggle.classList.toggle("active");
+        body.classList.toggle("dark");
+        // js code to keep user selected mode even page refresh or file reopen
+        if(!body.classList.contains("dark")){
+            localStorage.setItem("mode" , "light-mode");
+        }else{
+            localStorage.setItem("mode" , "dark-mode");
+        }
+      });
+    // js code to toggle search box
+        searchToggle.addEventListener("click" , () =>{
+        searchToggle.classList.toggle("active");
+      });
+    
+      
+    //   js code to toggle sidebar
+    sidebarOpen.addEventListener("click" , () =>{
+    nav.classList.add("active");
+    });
+    body.addEventListener("click" , e =>{
+    let clickedElm = e.target;
+    if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
+        nav.classList.remove("active");
+    }
+    });
+    </script>
+
+
+    
+      
+    
+      <script src="script.js"></script>
+    
+</body>
+</html>
